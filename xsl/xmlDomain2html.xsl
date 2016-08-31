@@ -10,7 +10,7 @@
   <xsl:template match="*[contains(@class, ' xml-d/xmlelem ')]" priority="10">
     <code>
       <xsl:text>&lt;</xsl:text>
-      <xsl:apply-templates/>
+      <xsl:next-match/>
       <xsl:text>&gt;</xsl:text>
     </code>
   </xsl:template>
@@ -18,14 +18,14 @@
   <xsl:template match="*[contains(@class, ' xml-d/xmlatt ')]" priority="10">
     <code>
       <xsl:text>@</xsl:text>
-      <xsl:apply-templates/>
+      <xsl:next-match/>
     </code>
   </xsl:template>
 
   <xsl:template match="*[contains(@class, ' xml-d/textent ')]" priority="10">
     <code>
       <xsl:text>&amp;</xsl:text>
-      <xsl:apply-templates/>
+      <xsl:next-match/>
       <xsl:text>;</xsl:text>
     </code>
   </xsl:template>
@@ -33,7 +33,7 @@
   <xsl:template match="*[contains(@class, ' xml-d/parment ')]" priority="10">
     <code>
       <xsl:text>%</xsl:text>
-      <xsl:apply-templates/>
+      <xsl:next-match/>
       <xsl:text>;</xsl:text>
     </code>
   </xsl:template>
@@ -41,7 +41,7 @@
   <xsl:template match="*[contains(@class, ' xml-d/numcharref ')]" priority="10">
     <code>
       <xsl:text>&amp;#</xsl:text>
-      <xsl:apply-templates/>
+      <xsl:next-match/>
       <xsl:text>;</xsl:text>
     </code>
   </xsl:template>
