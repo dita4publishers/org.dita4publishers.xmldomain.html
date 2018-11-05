@@ -15,4 +15,5 @@
   <feature extension="package.support.email" value="ekimber@contrext.com"/>
   
   <feature extension="dita.xsl.xhtml" value="xsl/xmlDomain2html.xsl" type="file"/>  
+  <feature extension="dita.xsl.html5" value="xsl/xmlDomain2html.xsl" type="file"/>  
 </plugin>
